@@ -7,7 +7,7 @@ This repo is now Dockerized for local development and testing on Windows.
 - Node not required locally; containers provide toolchains
 
 ## Services
-- Client (Angular 16) → http://localhost:4200
+- Client (Angular 21) → http://localhost:4200
 - Server (Express + Sequelize) → http://localhost:3000
 - MySQL 8 → localhost:3306
 - Redis 7 → localhost:6379
