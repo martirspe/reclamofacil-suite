@@ -1,6 +1,6 @@
-[submodule "complaints-book-client"]
-	path = complaints-book-client
-	url = https://github.com/martirspe/complaints-book-client.git
-[submodule "complaints-book-server"]
-	path = complaints-book-server
-	url = https://github.com/martirspe/complaints-book-server.git
+[submodule "reclamofacil-client"]
+	path = reclamofacil-client
+	url = https://github.com/martirspe/reclamofacil-client.git
+[submodule "reclamofacil-server"]
+	path = reclamofacil-server
+	url = https://github.com/martirspe/reclamofacil-server.git
