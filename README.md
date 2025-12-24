@@ -288,7 +288,7 @@ docker-compose up -d
 ### No aparece el branding del tenant
 ✅ Verifica que el seed haya creado el tenant:
 ```bash
-curl http://localhost:3000/api/tenants/default/branding
+curl http://localhost:3000/api/tenants/default
 ```
 ✅ Revisa la consola del navegador por errores
 
