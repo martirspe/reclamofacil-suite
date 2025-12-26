@@ -34,7 +34,7 @@ Sistema completo de Libro de Reclamaciones digital con arquitectura SaaS multi-t
 - **JWT** para usuarios web (dashboard admin)
 - **API Keys** con scopes para integraciones externas
 - **RBAC por tenant**: roles admin y staff
-- **reCAPTCHA v2** en formularios públicos
+- **reCAPTCHA v3 (score)** en formularios públicos
 
 ---
 
@@ -121,7 +121,7 @@ export const environment = {
   production: false,
   API_URL_CLAIM: 'http://localhost:3000',
   PUBLIC_API_KEY: 'tu-api-key-aqui',  // ← PEGAR AQUÍ
-  RECAPTCHA_V2_KEY: 'tu-recaptcha-key'
+  RECAPTCHA_V3_KEY: 'tu-recaptcha-key'
 };
 ```
 3. Reinicia el contenedor client si ya estaba corriendo:
@@ -144,35 +144,10 @@ curl http://localhost:3000/api/claim_types
 
 ---
 
-## 📚 Documentación completa
+## 📚 Documentación
 
-### 📦 Por componente
-
-#### Backend (reclamofacil-server)
-- **[README.md](reclamofacil-server/README.md)** — Documentación completa del backend
-  - 45+ endpoints documentados
-  - Autenticación JWT y API Keys
-  - Sistema de suscripciones
-  - Branding y emails
-  - Variables de entorno
-
-#### Frontend (reclamofacil-client)
-- **[README.md](reclamofacil-client/README.md)** — Documentación completa del frontend
-  - Wizard de 4 pasos
-  - Integración con backend
-  - Configuración de environments
-  - Validaciones dinámicas
-
-### 📖 Guías técnicas (backend)
-- **[SUBSCRIPTIONS.md](reclamofacil-server/SUBSCRIPTIONS.md)** — Sistema de planes SaaS completo
-- **[QUICK_REFERENCE.md](reclamofacil-server/QUICK_REFERENCE.md)** — Referencia rápida de endpoints
-- **[DOCUMENTATION_INDEX.md](reclamofacil-server/DOCUMENTATION_INDEX.md)** — Índice y flujos por rol
-- **[TESTING_GUIDE.md](reclamofacil-server/TESTING_GUIDE.md)** — Guía de testing
-
-### 📊 Reportes técnicos
-- **[COMPLETION_REPORT.md](reclamofacil-server/COMPLETION_REPORT.md)** — Consolidación del sistema
-- **[VERIFICATION_REPORT.md](reclamofacil-server/VERIFICATION_REPORT.md)** — Checklist y métricas
-- **[MIGRATION_SUMMARY.md](reclamofacil-server/MIGRATION_SUMMARY.md)** — Resumen de migraciones
+- Backend: [reclamofacil-server/README.md](reclamofacil-server/README.md)
+- Frontend: [reclamofacil-client/README.md](reclamofacil-client/README.md)
 
 ---
 
@@ -321,7 +296,7 @@ docker-compose logs -f redis
 | **Pro** | $149 | 20 | 10,000 | 100 GB | ✅ | ✅ | 200/min |
 | **Enterprise** | Custom | ∞ | ∞ | ∞ | ✅ | ✅ | 1000/min |
 
-Ver [reclamofacil-server/src/config/plans.js](reclamofacil-server/src/config/plans.js) para detalles completos.
+Ver [reclamofacil-server/src/config/planFeatures.js](reclamofacil-server/src/config/planFeatures.js) para detalles completos.
 
 ---
 
@@ -331,7 +306,7 @@ Ver [reclamofacil-server/src/config/plans.js](reclamofacil-server/src/config/pla
 - **API Keys** hasheadas en base de datos
 - **Rate limiting** por tenant vía Redis
 - **CORS** restrictivo con whitelist
-- **reCAPTCHA v2** en formularios públicos
+- **reCAPTCHA v3 (score)** en formularios públicos
 - **Validación** de inputs en cliente y servidor
 - **Helmet.js** para headers de seguridad
 - **Auditoría** de operaciones sensibles
@@ -396,6 +371,7 @@ Ver documentación de cada componente para detalles completos de despliegue.
 
 ## 🤝 Contribución
 
+Contribución limitada a colaboradores internos. Si eres del equipo:
 1. Revisa la documentación en `reclamofacil-server/` y `reclamofacil-client/`
 2. Crea una rama para tu feature
 3. Implementa cambios con tests
@@ -408,17 +384,10 @@ Ver documentación de cada componente para detalles completos de despliegue.
 
 Para dudas técnicas o issues:
 - 📖 Revisa los READMEs específicos de cada componente
-- 📚 Consulta [DOCUMENTATION_INDEX.md](reclamofacil-server/DOCUMENTATION_INDEX.md)
 - 🐛 Abre un issue en el repositorio con detalles completos
 
 ---
 
 ## 📜 Licencia
 
-[Tu licencia aquí]
-
----
-
-## 👥 Autores
-
-[Tu información aquí]
+Proyecto privado. Todos los derechos reservados.
